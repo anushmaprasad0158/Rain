@@ -1,0 +1,204 @@
+:root {
+  --nasa-blue: #0b3d91;
+  --nasa-red: #fc3d21;
+  --sky-light: #cfe4ff;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --text-dark: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(to bottom, #9cccfb, #e8f4ff);
+  background-image: url('https://www.transparenttextures.com/patterns/cloudy-day.png');
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--nasa-blue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+header img {
+  height: 40px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #cce0ff;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Input section */
+.input-section {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: var(--nasa-blue);
+  box-shadow: 0 0 5px rgba(11, 61, 145, 0.3);
+}
+
+button {
+  grid-column: 1 / -1;
+  background: var(--nasa-red);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e6351f;
+}
+
+/* Forecast Section */
+#forecastSection {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 180px;
+  background: var(--gray);
+  border-left: 5px solid var(--nasa-blue);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--nasa-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* Advice */
+#advice {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* News Section */
+#newsSection {
+  background: var(--white);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#newsSection h2 {
+  color: var(--nasa-blue);
+  margin-bottom: 1rem;
+}
+
+.news-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item a {
+  text-decoration: none;
+  color: var(--nasa-blue);
+  font-weight: 600;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: var(--nasa-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    margin-top: 0.5rem;
+  }
+}

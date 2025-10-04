@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will It Rain On My Parade?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo">
+      Will It Rain On My Parade?
+    </h1>
+    <p>Predict rain and explore NASA’s weather insights</p>
+  </header>
+
+  <main>
+    <!-- Input Form -->
+    <section class="input-section">
+      <div class="input-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="e.g. Pathanamthitta, India" />
+      </div>
+
+      <div class="input-group">
+        <label for="lat">Latitude</label>
+        <input type="number" id="lat" placeholder="9.26" step="0.0001" />
+      </div>
+
+      <div class="input-group">
+        <label for="lon">Longitude</label>
+        <input type="number" id="lon" placeholder="76.78" step="0.0001" />
+      </div>
+
+      <div class="input-group">
+        <label for="date">Select Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <button id="getForecast">Get Forecast</button>
+    </section>
+
+    <!-- Forecast Results -->
+    <section id="forecastSection" class="hidden">
+      <h2>Forecast Results</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🌧️ Rain Probability</h3>
+          <p id="rainProb">--%</p>
+        </div>
+        <div class="card">
+          <h3>🌡️ Temperature</h3>
+          <p id="temp">-- °C</p>
+        </div>
+        <div class="card">
+          <h3>💨 Wind Speed</h3>
+          <p id="wind">-- km/h</p>
+        </div>
+        <div class="card">
+          <h3>🌫️ Air Quality</h3>
+          <p id="aqi">--</p>
+        </div>
+      </div>
+      <div id="advice"></div>
+    </section>
+
+    <!-- NASA / Weather News -->
+    <section id="newsSection">
+      <h2>🛰️ Latest Weather & NASA News</h2>
+      <div id="newsContainer">
+        <p>Loading latest updates...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by Team SkyPredict • NASA Space Apps Challenge 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
